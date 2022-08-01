@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="car-mark" />
+        <module name="car-mark-backend" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="car-mark" options="-parameters" />
+      <module name="car-mark-backend" options="-parameters" />
     </option>
   </component>
 </project>
