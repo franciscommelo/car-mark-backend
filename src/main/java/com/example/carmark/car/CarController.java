@@ -11,8 +11,8 @@ import java.util.List;
 import static java.util.Map.of;
 
 @RestController
-@RequestMapping("/api/v1/car")
 @RequiredArgsConstructor
+@RequestMapping("/car")
 public class CarController {
 
     private final CarServiceImpl carService;
@@ -138,5 +138,4 @@ public class CarController {
                 .developerMessage("Success")
                 .build());
     }
-
 }

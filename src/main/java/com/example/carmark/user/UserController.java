@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController @RequiredArgsConstructor @RequestMapping("/api/v1/users")
+@RestController
+@RequestMapping("/users")
+@RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
 
@@ -15,7 +17,5 @@ public class UserController {
     public  ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok().body(userService.getAllUsers());
     }
-
-
 
 }

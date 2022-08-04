@@ -11,14 +11,15 @@ import java.util.Collection;
 
 import static javax.persistence.FetchType.*;
 
+@Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Entity
+@Table(name = "users")
 public class User {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String username;
     private String email;
     private String password;
     @ManyToMany(fetch = EAGER)

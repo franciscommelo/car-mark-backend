@@ -2,17 +2,18 @@ package com.example.carmark.user;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 
-@Service @RequiredArgsConstructor @Transactional @Slf4j
+@Service @RequiredArgsConstructor @Transactional @Slf4j @Component
 public class UserServiceImpl implements UserService {
 
-    private UserRepository userRepository;
-    private RoleRepository roleRepository;
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
     @Override
     public User saveUser(User user) {
